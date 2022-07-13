@@ -25,12 +25,11 @@ from django.contrib.auth.views import logout_then_login
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('accounts/login/', callLogin),
+    path('', callLogin),
     path('registro/',callRegister),
     path('index/',indexCall),
     path('asistencia/',asistenciaCall),
     path('configuracion/',configuracionCall),
     path('asistenciaFicha/',asistenciaFichaCall),
     path('logout/',logout_then_login, name = 'logout')
-
 ]
