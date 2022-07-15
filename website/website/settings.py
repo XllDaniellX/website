@@ -14,6 +14,7 @@ from pathlib import Path
 from django.urls import reverse_lazy
 
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -28,6 +29,10 @@ SECRET_KEY = 'django-insecure-3rg+_1k!pbxjqorq0nri$osy=ld)h^xm(y*7n_o!s-b=2mcdv*
 DEBUG = True
 
 ALLOWED_HOSTS = []
+
+
+LOGIN_URL = ""
+
 
 # Messages
 MESSAGE_STORAGE = 'django.contrib.messages.storage.cookie.CookieStorage'
@@ -131,8 +136,9 @@ USE_I18N = True
 
 USE_TZ = True
 
-LOGOUT_REDIRECT_URL = reverse_lazy('login')
+LOGIN_REDIRECT_URL = reverse_lazy('index')
 
+LOGOUT_REDIRECT_URL = reverse_lazy('')
 
 
 # Static files (CSS, JavaScript, Images)
@@ -141,6 +147,9 @@ LOGOUT_REDIRECT_URL = reverse_lazy('login')
 STATIC_URL = 'static/'
 
 STATICFILES_DIRS = ['static/']
+
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field

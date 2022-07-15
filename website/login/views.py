@@ -1,10 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.contrib import messages
 import mysql.connector as sql
 
 
 # Create your views here.
 def callLogin(request):
+
     if request.method == 'POST':
         m = sql.connect(host='localhost',user='root',passwd='',database='usuarios')
         cursor = m.cursor()
@@ -16,6 +17,7 @@ def callLogin(request):
             # Valida pw
             if key == 'pass':
                 password = value
+                
                 
         c = f"CALL `spLogin`('{user}', '{password}');"
         cursor.execute(c)
@@ -30,7 +32,6 @@ def callLogin(request):
 
 
 
-        
-    
- 
-            
+
+
+

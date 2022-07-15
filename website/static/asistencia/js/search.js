@@ -6,4 +6,3 @@ $(document).ready(() => {
         $(`table td:nth-child(${indiceColuma + 1})`).addClass('resaltar');
     });
 });
-
